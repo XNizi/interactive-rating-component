@@ -1,0 +1,179 @@
+@use 'colors' as *;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	display: flex;
+   flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-size: 15px;
+	padding: 20px;
+	font-family: 'Overpass', sans-serif;
+	background-color: $Very-Dark-Blue;
+	color: $White;
+	overflow: hidden;
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.rating-component {
+		.show {
+			visibility: visible;
+		}
+		position: relative;
+		background-color: $Dark-Blue;
+		border-radius: 25px;
+		overflow: hidden;
+		padding: 20px;
+		max-width: 500px;
+		z-index: 1;
+		.card__icon {
+			border-radius: 50%;
+			height: 45px;
+			width: 45px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #212630;
+			img {
+				width: 20px;
+			}
+		}
+		h2 {
+			margin-top: 25px;
+			font-size: 2rem;
+		}
+		.card__text {
+			margin-top: 15px;
+			color: $Light-Grey;
+			font-size: 1.4rem;
+		}
+		.card__rating-box {
+			margin-top: 25px;
+			display: flex;
+			justify-content: space-evenly;
+			.card__rating-element {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 45px;
+				height: 45px;
+				border-radius: 50%;
+				color: $Light-Grey;
+				background-color: #212630;
+				cursor: pointer;
+				transition: color 0.3s, background-color 0.3s;
+				&:hover {
+					background-color: $Medium-Grey;
+					color: $White;
+				}
+			}
+			.activeRating {
+				background-color: $Orange;
+				color: $White;
+			}
+		}
+		.button__box {
+			margin-top: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.submitBtn {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $White;
+			background-color: $Orange;
+			border-radius: 25px;
+			padding: 15px 100px;
+			font-weight: bold;
+			letter-spacing: 2px;
+			transition: background-color 0.3s, color 0.3s;
+			&:hover {
+				background-color: $White;
+				color: $Orange;
+			}
+		}
+	}
+
+	.rating-component--show-rate {
+		visibility: hidden;
+		position: absolute;
+		z-index: 500;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.rate__box {
+			margin-top: 15px;
+			background-color: $Very-Dark-Blue;
+			padding: 8px 15px;
+			border-radius: 25px;
+			color: $Orange;
+		}
+		h2 {
+			margin-bottom: -5px;
+		}
+		.card__text--show-rating {
+			text-align: center;
+			font-size: 1.4rem;
+		}
+	}
+}
+footer {
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+	}
+	.attribution a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+@media (min-width: 500px) {
+	.card {
+		.rating-component {
+			.card__icon {
+				height: 55px;
+				width: 55px;
+			}
+			h2 {
+				font-size: 3rem;
+			}
+			.card__text {
+				font-size: 1.9rem;
+			}
+			.card__rating-box {
+				margin-top: 25px;
+
+				.card__rating-element {
+					width: 55px;
+					height: 55px;
+				}
+			}
+			.button__box {
+				margin-top: 20px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.submitBtn {
+				padding: 15px 150px;
+			}
+		}
+	}
+}
