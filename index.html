@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Frontend Mentor | Interactive rating component</title>
+   <link rel="icon" type="image/png" sizes="32x32" href="./dist/img/favicon-32x32.png">
+   <link rel="stylesheet" href="./dist/css/main.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+   <main>
+      <div class="card">
+
+         <div class="rating-component">
+            <div class="card__icon">
+               <img src="./dist/img/icon-star.svg" alt=".">
+            </div>
+            <h2>How did we do?</h2>
+            <p class="card__text">
+               Please let us know how we did with your support request. All feedback is appreciated
+               to help us improve our offering!
+            </p>
+            <div class="card__rating-box">
+               <div class="card__rating-element" id="1"><span>1</span></div>
+               <div class="card__rating-element" id="2"><span>2</span></div>
+               <div class="card__rating-element" id="3"><span>3</span></div>
+               <div class="card__rating-element" id="4"><span>4</span></div>
+               <div class="card__rating-element" id="5"><span>5</span></div>
+            </div>
+
+            <div class="button__box">
+               <a class="submitBtn">submit</a>
+            </div>
+
+            <div class="rating-component rating-component--show-rate">
+
+               <div class="img__box">
+                  <img src="./dist/img/illustration-thank-you.svg" alt=".">
+               </div>
+               <div class="rate__box">
+                  <p>You selected <span class="rateNumber"></span> out of 5</p>
+               </div>
+               <h2>Thank you!</h2>
+               <p class="card__text card__text--show-rating">We appreciate you taking the time to give a rating. If you ever need more support,
+                  don’t hesitate to get in touch!</p>
+
+
+            </div>
+         </div>
+
+
+
+      </div>
+   </main>
+   <footer>
+      <div class="attribution">
+         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+         Coded by <a href="https://github.com/XNizi" target="_blank">Nizi</a>.
+       </div>
+   </footer>
+
+
+   <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>
