@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./dist/img/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+
+<body>
+
+
+
+  <main>
+    <div class="card">
+      <div class="card__first-page">
+        <div class="card__star">
+          <img src="./dist/img/icon-star.svg" alt="star icon">
+        </div>
+        <h2 class="card__title">How did we do?</h2>
+        <p class="card__text">Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+        <div class="card__ratingBox">
+          <div class="card__ratingBox-item" data-id="1">1</div>
+          <div class="card__ratingBox-item" data-id="2">2</div>
+          <div class="card__ratingBox-item" data-id="3">3</div>
+          <div class="card__ratingBox-item" data-id="4">4</div>
+          <div class="card__ratingBox-item" data-id="5">5</div>
+        </div>
+        <button class="card__btn">submit</button>
+      </div>
+      <div class="card__second-page">
+        <img src="./dist/img/illustration-thank-you.svg" class="card__img" alt="">
+        <p class="card__yourRate">You selected 4 out 5</p>
+        <h2 class="card__title card__title--second">Thank you!</h2>
+        <p class="card__text">We appreciate you taking the time to give a rating. If you ever need more support, don’t
+          hesitate to get in touch!</p>
+      </div>
+    </div>
+  </main>
+  <script src="./dist/js/script.min.js"></script>
+</body>
+
+</html>
