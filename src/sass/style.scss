@@ -1,0 +1,171 @@
+@use './variable' as *;
+html {
+	font-size: 62.5%;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Overpass', sans-serif;
+	background-color: $VeryDarkBlue;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 24px;
+}
+.card {
+	position: relative;
+	background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+	border-radius: 15px;
+	padding: 24px 24px 32px;
+	max-width: 412px;
+	overflow: hidden;
+	&__icon {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: $DarkBlue;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__title {
+		color: $PureWhite;
+		font-size: 2.4rem;
+		font-weight: 700;
+		margin: 16px 0 10px;
+	}
+	&__text {
+		color: $LightGrey;
+		font-size: 1.4rem;
+		line-height: 22px;
+	}
+	&__ratingBox {
+		display: flex;
+		justify-content: space-between;
+		margin: 24px 0;
+	}
+	&__ratingItem {
+		border: none;
+		background-color: $DarkBlue;
+		color: #7c8798;
+		height: 42px;
+		width: 42px;
+		border-radius: 50%;
+		@include Rating;
+		transition: color 0.3s, background-color 0.3s;
+		cursor: pointer;
+		&:hover {
+			background-color: #7c8798;
+			color: $PureWhite;
+		}
+		&--active {
+			background-color: $Orange;
+			color: $PureWhite;
+		}
+	}
+	&__submit {
+		background-color: $Orange;
+		border: none;
+		border-radius: 22.5px;
+		color: $PureWhite;
+		font-size: 1.4rem;
+		font-weight: 700;
+		letter-spacing: 1.867px;
+		text-transform: uppercase;
+		width: 100%;
+		padding: 12px 0;
+		transition: color 0.3s, background-color 0.3s;
+		cursor: pointer;
+		&:hover {
+			color: $Orange;
+			background-color: $PureWhite;
+		}
+	}
+}
+.second-page {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+	padding: 34px 24px 37px;
+	text-align: center;
+	&--active {
+		display: block;
+	}
+	.card__yourRate {
+		margin: 24px auto;
+		background-color: $DarkBlue;
+		color: $Orange;
+		padding: 5px 12px;
+		border-radius: 22.5px;
+		width: 168px;
+		font-size: 1.4rem;
+		line-height: 22px;
+	}
+	.card__thanks {
+		font-size: 2.4rem;
+		color: $PureWhite;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	.card__underthanks {
+		font-size: 1.4rem;
+		color: $LightGrey;
+		line-height: 22px;
+	}
+}
+
+@media (min-width: 567px) {
+	.card {
+		padding: 32px;
+		border-radius: 30px;
+		&__icon {
+			width: 48px;
+			height: 48px;
+		}
+		&__title {
+			@include HeadingLarge;
+			margin: 30px 0 7px;
+		}
+		&__text {
+			@include Body;
+		}
+		&__ratingBox {
+			margin: 24px 0 32px;
+		}
+		&__ratingItem {
+			width: 51px;
+			height: 51px;
+		}
+		&__submit {
+			padding: 11px 0;
+			@include HeadingMedium;
+		}
+	}
+	.second-page {
+		padding: 45px 40px 45px 30px;
+
+		.card__yourRate {
+			margin: 32px auto;
+			padding: 4px 19.5px;
+			width: 193px;
+			font-size: 1.5rem;
+			line-height: 24px;
+		}
+		.card__thanks {
+			font-size: 2.8rem;
+			margin-bottom: 7px;
+		}
+		.card__underthanks {
+			@include Body;
+			color: $LightGrey;
+		}
+	}
+}
